@@ -2,11 +2,6 @@ import React from "react";
 import styles from "./Buttom.module.css";
 import Spinner from "../layout/Spinner";
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: "default" | "outline";
-  loading?: boolean;
-};
-
 export default function Button({
   variant = "default",
   loading = false,
@@ -14,7 +9,7 @@ export default function Button({
   children,
   disabled,
   ...props
-}: ButtonProps) {
+}) {
   const VARIANTS_MAP = {
     default: styles["button--default"],
     outline: styles["button--outline"],
