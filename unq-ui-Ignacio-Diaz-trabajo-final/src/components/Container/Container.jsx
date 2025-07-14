@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Container.style.scss';
+import './Container.style.css'; // CSS plano
 
 export default function Container({
   direction = 'col',
@@ -12,8 +12,9 @@ export default function Container({
 }) {
   return (
     <Tag
-      className={`${styles.containerWrapper} ${className}`}
+      className={`containerWrapper ${className}`} // ✅ sin 'styles.'
       style={{
+        display: 'flex',
         flexDirection: direction === 'row' ? 'row' : 'column',
         gap,
         alignItems: align,

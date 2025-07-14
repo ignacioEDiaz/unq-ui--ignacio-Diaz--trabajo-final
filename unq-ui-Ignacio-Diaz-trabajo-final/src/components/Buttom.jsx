@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Buttom.module.css";
-import Spinner from "../layout/Spinner";
+import Spinner from "./Spinner/Spinner.jsx";
 
 export default function Button({
   variant = "default",
