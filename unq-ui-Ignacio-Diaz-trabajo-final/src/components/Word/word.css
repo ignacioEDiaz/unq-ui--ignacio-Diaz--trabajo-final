@@ -1,0 +1,61 @@
+
+.containerWordBox {
+  display: flex;
+  gap: 8px;
+}
+
+.word {
+  width: clamp(36px, 12vw, 50px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  user-select: none;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  border: 2px solid #3a3a3c;
+  color: white;
+
+  &--default {
+    background-color: transparent;
+  }
+
+  &--correct {
+    background-color: #538d4e;
+    border-color: #538d4e;
+  }
+
+  &--elsewhere {
+    background-color: #b59f3b;
+    border-color: #b59f3b;
+  }
+
+  &--absent {
+    background-color: #3a3a3c;
+  }
+}
+
+.flipping {
+  animation: flip 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+  49.99% {
+    transform: rotateX(90deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+    background-color: #3a3a3c;
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
