@@ -66,7 +66,7 @@ export default function GamePage() {
 
       setCurrentInput("");
     } catch (err) {
-      toast.error("Invalid word");
+      toast.error("that it's not a word");
     } finally {
       setTimeout(() => {
         setAttemptHistory((prev) =>

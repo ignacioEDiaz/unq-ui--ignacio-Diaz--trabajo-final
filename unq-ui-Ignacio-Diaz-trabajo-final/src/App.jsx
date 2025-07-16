@@ -3,6 +3,7 @@ import HomePage from "./Pages/Home";
 import GamePage from "./Pages/game";
 import WinPage from "./Pages/win";
 import LosePage from "./Pages/lose";
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
 
 
       </Routes>
+      <ToastContainer position="top-right" />
     </BrowserRouter>
   );
-}
+} 

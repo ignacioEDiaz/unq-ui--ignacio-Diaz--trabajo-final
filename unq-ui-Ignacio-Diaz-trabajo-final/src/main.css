@@ -8,7 +8,7 @@ body,
 }
 
 :root {
-  font-family: 'Rajdhani', 'Orbitron', sans-serif; /* Fuentes futuristas */
+  font-family: 'Rajdhani', 'Orbitron', sans-serif; 
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   height: 100vh;
   color: rgba(255, 255, 255, 0.9);
@@ -49,7 +49,7 @@ ol {
   list-style: none;
 }
 
-/* Efecto de partículas futuristas en el fondo */
+
 body::before {
   content: '';
   position: fixed;
@@ -91,7 +91,6 @@ body::before {
   border: 1px solid rgba(0, 170, 255, 0.3);
 }
 
-/* Animaciones mejoradas */
 .bounce {
   font-size: 5rem;
   margin-bottom: 1rem;
@@ -170,7 +169,6 @@ body::before {
   }
 }
 
-/* Efectos de conexión futurista */
 .container::after {
   content: '';
   position: absolute;
@@ -185,7 +183,6 @@ body::before {
   box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 0 2rem;

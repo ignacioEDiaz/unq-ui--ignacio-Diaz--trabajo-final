@@ -43,7 +43,7 @@
   animation: shine 1.5s infinite;
 }
 
-/* Estados de letra con efectos neón */
+
 .letter-box.correct {
   background: linear-gradient(135deg, #00c853, #00e676);
   color: white;
