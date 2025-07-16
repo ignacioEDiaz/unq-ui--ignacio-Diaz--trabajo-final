@@ -1,4 +1,4 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+/*import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Container from "../components/Container/Container";
 import Keyboard from "../components/Keyboard/keyboard.jsx";
@@ -78,3 +78,4 @@ export default function PlayPage() {
     </section>
   );
 }
+*/

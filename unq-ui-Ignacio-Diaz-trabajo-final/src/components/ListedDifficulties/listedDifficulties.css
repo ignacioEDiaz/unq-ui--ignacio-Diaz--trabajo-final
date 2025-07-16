@@ -1,0 +1,103 @@
+:root {
+    --neon-primary: #0af;
+    --neon-secondary: #f0a;
+    --neon-glow: 0 0 10px rgba(10, 175, 255, 0.8),
+                 0 0 20px rgba(0, 170, 255, 0.6),
+                 0 0 30px rgba(0, 170, 255, 0.4);
+    --neon-glow-hover: 0 0 15px rgba(10, 255, 175, 0.9),
+                       0 0 25px rgba(0, 255, 170, 0.7),
+                       0 0 35px rgba(0, 255, 170, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+   
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.item-list {
+    list-style: none;
+    width: 220px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.item-list:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--neon-primary), transparent);
+}
+
+.difficulty-button {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 16px;
+    width: 240px;
+    border: 2px solid var(--neon-primary);
+    cursor: pointer;
+    text-align: center;
+    background-color: rgba(20, 30, 50, 0.7);
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    box-shadow: var(--neon-glow), inset 0 0 10px rgba(10, 175, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.difficulty-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        transparent 45%,
+        var(--neon-primary),
+        transparent 55%
+    );
+    transform: rotate(30deg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.difficulty-button:hover {
+    background-color: rgba(30, 40, 60, 0.9);
+    color: white;
+    box-shadow: var(--neon-glow-hover), inset 0 0 15px rgba(10, 255, 175, 0.5);
+    border-color: var(--neon-secondary);
+    transform: translateY(-3px);
+}
+
+.difficulty-button:hover::before {
+    opacity: 0.3;
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(30deg) translate(-10%, -10%);
+    }
+    100% {
+        transform: rotate(30deg) translate(10%, 10%);
+    }
+}
