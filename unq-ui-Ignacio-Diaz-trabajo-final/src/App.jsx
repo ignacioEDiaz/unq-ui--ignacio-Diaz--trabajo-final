@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/Home";
 import GamePage from "./Pages/game";
+import WinPage from "./Pages/win";
+import LosePage from "./Pages/lose";
 
 export default function App() {
   return (
@@ -9,6 +11,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/game/:sessionId" element={<GamePage />} />
+        <Route path="/win" element={<WinPage />} />
+        <Route path="/lose" element={<LosePage />} />
+
+
       </Routes>
     </BrowserRouter>
   );

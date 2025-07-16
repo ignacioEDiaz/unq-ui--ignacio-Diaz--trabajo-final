@@ -56,12 +56,12 @@ export default function GamePage() {
         toast.success("You guessed the word!");
         setStatus("won");
         localStorage.removeItem("session");
-        navigate(ROUTES.GAME_WIN);
+        navigate(ROUTES.WIN);
       } else if (attemptHistory.length + 1 >= maxAttempts) {
         toast.error("You lost!");
         setStatus("lost");
         localStorage.removeItem("session");
-        navigate(ROUTES.GAME_OVER);
+        navigate(ROUTES.LOSE);
       }
 
       setCurrentInput("");
@@ -114,7 +114,7 @@ export default function GamePage() {
   useEffect(() => {
     if (!activeSession || activeSession.sessionId !== sessionId) {
       toast.error("Invalid session");
-      navigate("/");
+      navigate(ROUTES.HOME);
     }
   }, [activeSession, sessionId]);
 
